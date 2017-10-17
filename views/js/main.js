@@ -484,6 +484,7 @@ function updatePositions() {
   for (var i = 0; i < items.length; i++) {
     phase = Math.sin((scrollPos) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+       
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
