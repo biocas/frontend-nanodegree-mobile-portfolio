@@ -30,11 +30,32 @@ Some useful tips to help you get started:
 
 Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
+PageSpeed Insights: 
+Mobile: 90/100
+Desktop: 91/100
+
+Optimizations on index.html are as follows: 
+Add media="print" to print.css
+Minify and inline style.css
+Minify and inline perfmatters.js
+Optimize, compress and resize images 
+Remove webfont link 
+Add async attribute to analytics.js
+
 #### Part 2: Optimize Frames per Second in pizza.html
 
 To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
+
+Optimizing resizePizza function: 
+Avoiding unnecessary calculations in pizza slider by using percentage values and perform calculations inside the changeSliderLabel switch; 
+Storing the DOM query inside a variable to avoid repetition and using getElementsByClassName to avoid querying the whole DOM
+Storing variables outside the loop
+
+Optimizing updatePositions function: 
+Storing DOM queries and calculations on it outiside the loop 
+Moving variables outside the loop
 
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
