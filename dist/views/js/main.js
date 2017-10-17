@@ -480,8 +480,9 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
     
     var scrollPos = document.documentElement.scrollTop / 1250 || document.body.scrollTop / 1250; //queries the DOM outside the loop as well as doing the calculation
+    var phase; // creates variable outside the loop
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((scrollPos) + (i % 5));
+    phase = Math.sin((scrollPos) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
