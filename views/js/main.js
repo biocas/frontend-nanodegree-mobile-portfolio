@@ -504,12 +504,12 @@ window.addEventListener('scroll', function () {
    requestAnimationFrame(updatePositions);
 });
 
-// Generates the sliding pizzas when the page loads.
+// Generates the sliding pizzas when the page loads. Many thanks to the reviewwer, who kindly gave me useful guidance on how to get fewer background pizzas!
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
   var movingPizzas = document.getElementById("movingPizzas1"); //queries the DOM outside the loop, then uses this variable to appendChild inside the for loop
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 24; i++) { // changes the number of bakcground pizzas being drawn to 24; 
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
