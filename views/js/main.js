@@ -402,7 +402,7 @@ var pizzaElementGenerator = function(i) {
 var resizePizzas = function(size) {
   window.performance.mark("mark_start_resize");   // User Timing API function
 
-  // Changes the value for the size of the pizza above the slider, already using percentage values in order to avoid unnecessary calculations
+  // Changes the value for the size of the pizza above the slider, already using percentage values in order to avoid unnecessary calculations; the querySelector was replaced with getElementById as it is faster in querying the DOM
 
   function changeSliderLabel(size) {
     switch(size) {
@@ -422,12 +422,13 @@ var resizePizzas = function(size) {
 
   var newSize = changeSliderLabel(size); // the slider label switcher calculates the size of the pizzas to avoid repetition
 
-  // Iterates through pizza elements on the page and changes their widths without using px
+  // Iterates through pizza elements on the page and changes their widths without using px, storing variables outside the loop when possible
     
 var randomPizzas = document.getElementsByClassName("randomPizzaContainer"); //stores the DOM query inside a variable to avoid using it multiple times
 
   function changePizzaSizes(size) {
-    for (var i = 0; i < randomPizzas.length; i++) {
+      var pizzaLength = randomPizzas.length; 
+    for (var i = 0; i < pizzaLength; i++) {
       randomPizzas[i].style.width = newSize + "%"; //avoids using px and uses variables stored OUTSIDE the loop
     }
   }
