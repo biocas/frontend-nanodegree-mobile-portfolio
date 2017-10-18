@@ -508,7 +508,7 @@ window.addEventListener('scroll', function () {
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  var movingPizzas = document.getElementById(movingPizzas1); //queries the DOM outside the loop, then uses this variable to appendChild inside the for loop
+  var movingPizzas = document.getElementById("movingPizzas1"); //queries the DOM outside the loop, then uses this variable to appendChild inside the for loop
   for (var i = 0; i < 200; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
