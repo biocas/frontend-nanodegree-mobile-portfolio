@@ -57,6 +57,9 @@ Optimizing updatePositions function:
 Storing DOM queries and calculations on it outiside the loop 
 Moving variables outside the loop
 
+Variables are moved outside of for loops to improve efficiency, especially the ones that include DOM queries; 
+Reduction of the number of background pizzas 
+
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
 * [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
