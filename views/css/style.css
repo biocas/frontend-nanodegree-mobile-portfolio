@@ -33,6 +33,8 @@ form {
   position: fixed;
   width: 256px;
   z-index: -1;
+  transform: translateZ(0); /** as pointed in the Udacity review I received **/
+  backface-visibility: hidden; 
 }
 
 .randomPizzaContainer {
